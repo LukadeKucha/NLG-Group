@@ -23,9 +23,9 @@
             <nav class="navbar-content">
                 <a href="../" class="logo"><img style="height: 2.5rem;" src="../logo.png"></a>
                 <ul class="nav-links">
-                    <li><a href="../about/">კომპანიის შესახებ</a></li>
-                    <li><a href="#">პროექტები</a></li>
-                    <li><a href="../contact">გალერეა</a></li>
+                    <li><a href="#">კომპანიის შესახებ</a></li>
+                    <li><a href="../projects/">პროექტები</a></li>
+                    <li><a href="../gallery">გალერეა</a></li>
                 </ul>
                 <i class='bx bx-menu' id="burger"></i>
             </nav>
@@ -35,29 +35,18 @@
     <main>
         <div class="carousel-container">
             <div class="carousel">
-                <div class="slide">
-                    <img src="../img/test.jpg" alt="Slide 1">
-                    <div class="slide-caption">
-                        <a class="chooseflat" href="./">შეარჩიე შენი სახლი </a>
-                    </div>
-                
-                    <div class="slider-text">
-                        <h1 style="font-size: 48px;">კურორტი</h1>
+                <div class="slide" style="background-color: #C3C3C3;">
+                    <div class="project-title" style="width: auto;">
+                        <h1 style="font-size: 54px;">კომპანიის შესახებ</h1>
 
-                        <h1 style="font-size: 54px;">ა რ ა გ ვ ი ს პ ი რ ი</h1>
-                        <h1 style="font-size: 36px;">იცხოვრე ჯანსაღ გარემოში</h1>
                     </div>
-                </div>
-                <div class="slide">
-                    <img src="../img/test2.jpg" alt="Slide 2">
-                    <div class="slide-caption">
-                        <h2>Slide 2</h2>
-                        <p>Some text about slide 2</p>
+
+                    <div class="about-text">
+                        <h2>კომპანია ენ ელ ჯი გრუპი შეიქმნა 2022 წელს და მიზნად ისახავს...</h2>
+                       
                     </div>
                 </div>
             </div>
-            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
     <footer>
@@ -82,7 +71,7 @@
                     <i class="fab fa-instagram"></i>
                 </div>
             </div>
-            <b>პარტნიორები</b>
+            <b style="margin-top: 10px;">პარტნიორები</b>
             <br>
             <div class="partners">
                 <img src="../archstory.png">
@@ -95,8 +84,7 @@
             style="left: 40%; text-align: center; color: #ffff; font-weight: bold; position: absolute; bottom: 0; margin: 0 auto;">
             &copy; 2023 All rights reserved | i3D Render Studio</p>
     </footer>
-
-    <script src="../carousel.js"></script>
+ 
     <script>
 
         const burger = document.getElementById('burger');

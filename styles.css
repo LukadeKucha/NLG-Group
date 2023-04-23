@@ -5,7 +5,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+p{
+    margin-bottom: 0 !important;
+}
 * {
     margin: 0;
     padding: 0;
@@ -395,12 +397,34 @@ ul {
     font-weight: bold;
     right: 20%;
 }
+
+.project-title {
+    width: 500px;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    right: 25%;
+    top: 5%;
+  }
+  
+  .project-title h1{
+    font-weight: 900;
+  
+  }
 .slider-text h1{
     font-weight: 900;
     float: right;
 }
 .slide-caption h2 {
     margin-bottom: 1rem;
+}
+
+.about-text{
+    width: 800px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    color: white;
 }
 
 .carousel-prev,
