@@ -35,7 +35,7 @@
     </header>
     <!-- Carousel -->
     <main>
-        <div id="Room_info" class="Room_info" style="display: none; height: 120px; left: 694px; top: 290px;">
+        <div id="Room_info" class="Room_info" style="display: none; height: 90px; left: 694px; top: 290px;">
             <div class="Room_info_text">
                 ბინა <b class="room_info" style="font-weight: bold">307</b>
 
@@ -299,11 +299,7 @@
                        clip-path: polygon(74% 29%, 76% 33%, 79% 31%, 77% 28%, 76% 25%, 74% 25%);">
                     </div>
                 </a>
-            </div>
-            
-
-            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div>                    
         </div>
     </main>
     <footer>
@@ -332,10 +328,10 @@
             <b style="margin-top: 10px;">პარტნიორები</b>
             <br>
             <div class="partners">
-                <img src="../archstory.png">
-                <img src="../nlgroup.png">
-                <img src="../archstory.png">
-                <img src="../nlgroup.png">
+                <a style="cursor: pointer;" href=""><img src="../archstory.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../archstory.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
             </div>
         </div>
         <p
@@ -350,6 +346,7 @@
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         })
+        // 
     </script>
     <script src="flat.js"></script>
 </body>

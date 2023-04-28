@@ -50,7 +50,7 @@ function Floor_namber(el) {
 		document.querySelector(".room_kv3").innerHTML ='საცხოვრებელი: ' + kv3;
 	}
 	else if(kvs==='1') {
-		document.querySelector(".Room_info").style.height = '120px';
+		document.querySelector(".Room_info").style.height = '90px';
 		document.querySelector(".room_info").innerHTML = room;
 		document.querySelector(".Room_info_tex").style.display = 'none';
 		document.querySelector(".room_kv").innerHTML =  kv;

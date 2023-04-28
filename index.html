@@ -33,6 +33,14 @@
     </header>
     <!-- Carousel -->
     <main>
+           <a id="play-video" class="video-play-button" href="#">
+                        <span></span>
+                    </a>
+
+
+                    <div id="video-overlay" class="video-overlay">
+                        <a class="video-overlay-close">&times;</a>
+                    </div>
         <div class="carousel-container">
             <div class="carousel">
                 <div class="slide">
@@ -46,9 +54,14 @@
                         <h1 style="font-size: 54px;">ა რ ა გ ვ ი ს პ ი რ ი</h1>
                         <h1 style="font-size: 36px;">იცხოვრე ჯანსაღ გარემოში</h1>
                     </div>
+                    <!-- Video -->
+                 
                 </div>
                 <div class="slide">
-                    <img src="./img/test2.jpg" alt="Slide 2">
+                    <img src="./img/test2.jpg" alt="Slide 1">
+                    <div class="slide-caption">
+                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
+                    </div>
                 </div>
             </div>
             <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
@@ -73,17 +86,18 @@
                     <input type="text">
                 </div>
                 <div class="socials">
-                    <a href="https://www.facebook.com/NLG.Group.Georgia" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/NLG.Group.Georgia" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
                     <i class="fab fa-instagram"></i>
                 </div>
             </div>
             <b style="margin-top: 10px;">პარტნიორები</b>
             <br>
             <div class="partners">
-                <img src="archstory.png">
-                <img src="nlgroup.png">
-                <img src="archstory.png">
-                <img src="nlgroup.png">
+                <a style="cursor: pointer;" href=""><img src="../archstory.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../archstory.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
             </div>
         </div>
         <p
@@ -126,7 +140,26 @@
         slideInterval = setInterval(() => {
             nextSlide();
         }, 4000);
+    //   Video
+        $('#play-video').on('click', function (e) {
+            
+            e.preventDefault();
+            $('#video-overlay').addClass('open');
+            $("#video-overlay").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/ngElkyQ6Rhs" frameborder="0" allowfullscreen></iframe>');
+        });
 
+        $('.video-overlay, .video-overlay-close').on('click', function (e) {
+            e.preventDefault();
+            close_video();
+        });
+
+        $(document).keyup(function (e) {
+            if (e.keyCode === 27) { close_video(); }
+        });
+
+        function close_video() {
+            $('.video-overlay.open').removeClass('open').find('iframe').remove();
+        };
     </script>
 
 
