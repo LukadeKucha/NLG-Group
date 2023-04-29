@@ -35,8 +35,8 @@
     <main>
         <div class="carousel-container">
             <div class="carousel">
-                <div class="slide">
-                    <img src="../img/project1.png" alt="Slide 1">
+                <div class="slide">                    
+                    <img class="main-image" src="../img/project1.png" alt="Slide 1">
                     <div class="project-title">
                         <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 1</h1>
                     </div>
@@ -106,10 +106,10 @@
             <b style="margin-top: 10px;">პარტნიორები</b>
             <br>
             <div class="partners">
-                <img src="../archstory.png">
-                <img src="../nlgroup.png">
-                <img src="../archstory.png">
-                <img src="../nlgroup.png">
+                <a target="_blank" style="cursor: pointer;" href="http://archstory.ge/"><img src="../archstory.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
+                <a target="_blank" style="cursor: pointer;" href="http://archstory.ge/"><img src="../archstory.png"></a>
+                <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
             </div>
         </div>
         <p
@@ -119,6 +119,10 @@
 
     <script src="projects.js"></script>
     <script>
+        function changeImage(src) {
+  document.getElementById("main-image").src = src;
+}
+
 
         const burger = document.getElementById('burger');
         const navLinks = document.querySelector('.nav-links');
@@ -127,6 +131,7 @@
             navLinks.classList.toggle('active');
         })
     </script>
+
 </body>
 
 </html>

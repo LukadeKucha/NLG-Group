@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../logo.png">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="gallery.css">
     <title>NLG Group</title>
 </head>
 
@@ -23,9 +23,9 @@
             <nav class="navbar-content">
                 <a href="../" class="logo"><img style="height: 2.5rem;" src="../logo.png"></a>
                 <ul class="nav-links">
-                    <li><a href="#">კომპანიის შესახებ</a></li>
+                    <li><a href="../about/">კომპანიის შესახებ</a></li>
                     <li><a href="../projects/">პროექტები</a></li>
-                    <li><a href="../gallery">გალერეა</a></li>
+                    <li><a href="#">გალერეა</a></li>
                 </ul>
                 <i class='bx bx-menu' id="burger"></i>
             </nav>
@@ -35,18 +35,36 @@
     <main>
         <div class="carousel-container">
             <div class="carousel">
-                <div class="slide" style="background-color: #C3C3C3;">
-                    <div class="project-title" style="width: auto;">
-                        <h1 style="font-size: 54px;">კომპანიის შესახებ</h1>
-
-                    </div>
-
-                    <div class="about-text">
-                        <h2>კომპანია ენ ელ ჯი გრუპი შეიქმნა 2022 წელს და მიზნად ისახავს...</h2>
-
-                    </div>
+                <div class="slide">
+                    <img src="../img/project1.png" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="../img/project2.png" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="../img/project3.png" alt="Slide 3">
+                </div>
+                <div class="slide">
+                    <img src="../img/project4.png" alt="Slide 4">
+                </div>
+                <div class="slide">
+                    <img src="../img/project1.png" alt="Slide 5">
+                </div>
+                <div class="slide">
+                    <img src="../img/project1.png" alt="Slide 6">
+                </div>
+                <div class="slide">
+                    <img src="../img/project1.png" alt="Slide 7">
+                </div>
+                <div class="slide">
+                    <img src="../img/project1.png" alt="Slide 8">
+                </div>
+                <div class="slide">
+                    <img src="../img/project1.png" alt="Slide 9">
                 </div>
             </div>
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
     <footer>
@@ -62,6 +80,7 @@
                     <p>+995 597 38 28 32</p>
                     <p>+995 597 38 28 32</p>
                 </div>
+
                 <div class="number">
                     <b>დაგვიტოვეთ ნომერი</b>
                     <input type="text">
@@ -86,7 +105,12 @@
             &copy; 2023 All rights reserved | i3D Render Studio</p>
     </footer>
 
+    <script src="gallery.js"></script>
     <script>
+        function changeImage(src) {
+            document.getElementById("main-image").src = src;
+        }
+
 
         const burger = document.getElementById('burger');
         const navLinks = document.querySelector('.nav-links');
@@ -95,6 +119,7 @@
             navLinks.classList.toggle('active');
         })
     </script>
+
 </body>
 
 </html>

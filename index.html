@@ -33,14 +33,14 @@
     </header>
     <!-- Carousel -->
     <main>
-           <a id="play-video" class="video-play-button" href="#">
-                        <span></span>
-                    </a>
+        <a id="play-video" class="video-play-button" href="#">
+            <span></span>
+        </a>
 
 
-                    <div id="video-overlay" class="video-overlay">
-                        <a class="video-overlay-close">&times;</a>
-                    </div>
+        <div id="video-overlay" class="video-overlay">
+            <a class="video-overlay-close">&times;</a>
+        </div>
         <div class="carousel-container">
             <div class="carousel">
                 <div class="slide">
@@ -55,7 +55,7 @@
                         <h1 style="font-size: 36px;">იცხოვრე ჯანსაღ გარემოში</h1>
                     </div>
                     <!-- Video -->
-                 
+
                 </div>
                 <div class="slide">
                     <img src="./img/test2.jpg" alt="Slide 1">
@@ -94,9 +94,9 @@
             <b style="margin-top: 10px;">პარტნიორები</b>
             <br>
             <div class="partners">
-                <a style="cursor: pointer;" href=""><img src="../archstory.png"></a>
+                <a target="_blank" style="cursor: pointer;" href="http://archstory.ge/"><img src="../archstory.png"></a>
                 <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
-                <a style="cursor: pointer;" href=""><img src="../archstory.png"></a>
+                <a target="_blank" style="cursor: pointer;" href="http://archstory.ge/"><img src="../archstory.png"></a>
                 <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
             </div>
         </div>
@@ -140,12 +140,12 @@
         slideInterval = setInterval(() => {
             nextSlide();
         }, 4000);
-    //   Video
+        //   Video
         $('#play-video').on('click', function (e) {
-            
+
             e.preventDefault();
             $('#video-overlay').addClass('open');
-            $("#video-overlay").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/ngElkyQ6Rhs" frameborder="0" allowfullscreen></iframe>');
+            $("#video-overlay").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/vn08NZixOGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
         });
 
         $('.video-overlay, .video-overlay-close').on('click', function (e) {

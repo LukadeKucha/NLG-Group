@@ -8,12 +8,12 @@ let slideInterval;
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % carouselSlides.length;
-  carousel.style.transform = `translateX(-${currentIndex * 25}%)`;
+  carousel.style.transform = `translateX(-${currentIndex * 100/9}%)`;
 }
 
 function prevSlide() {
   currentIndex = (currentIndex - 1 + carouselSlides.length) % carouselSlides.length;
-  carousel.style.transform = `translateX(-${currentIndex * 25}%)`;
+  carousel.style.transform = `translateX(-${currentIndex * 100/9}%)`;
 }
 
 prevBtn.addEventListener('click', prevSlide);
