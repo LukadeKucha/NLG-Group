@@ -44,7 +44,7 @@
         <div class="carousel-container">
             <div class="carousel">
                 <div class="slide">
-                    <img src="./img/test.jpg" alt="Slide 1">
+                    <img src="./img/slider_00000.jpg" alt="Slide 1">
                     <div class="slide-caption">
                         <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
                     </div>
@@ -58,7 +58,25 @@
 
                 </div>
                 <div class="slide">
-                    <img src="./img/test2.jpg" alt="Slide 1">
+                    <img src="./img/slider_00001.jpg" alt="Slide 2">
+                    <div class="slide-caption">
+                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./img/slider_00002.jpg" alt="Slide 3">
+                    <div class="slide-caption">
+                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./img/slider_00003 (1).jpg" alt="Slide 4">
+                    <div class="slide-caption">
+                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./img/slider_00004.jpg" alt="Slide 4">
                     <div class="slide-caption">
                         <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
                     </div>
@@ -126,12 +144,12 @@
 
         function nextSlide() {
             currentIndex = (currentIndex + 1) % carouselSlides.length;
-            carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
+            carousel.style.transform = `translateX(-${currentIndex * 25}%)`;
         }
 
         function prevSlide() {
             currentIndex = (currentIndex - 1 + carouselSlides.length) % carouselSlides.length;
-            carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
+            carousel.style.transform = `translateX(-${currentIndex * 25}%)`;
         }
 
         prevBtn.addEventListener('click', prevSlide);
