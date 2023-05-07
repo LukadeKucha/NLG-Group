@@ -96,3 +96,17 @@ b {
 .Room_info_text_bottom>b {
     font-weight: bold;
 }
+
+.carousel-container {
+    margin-top: 6rem;
+    position: relative;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}

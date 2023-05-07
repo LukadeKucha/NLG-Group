@@ -41,51 +41,34 @@
         <div id="video-overlay" class="video-overlay">
             <a class="video-overlay-close">&times;</a>
         </div>
-        <div class="carousel-container">
-            <div class="carousel">
+        <div class="slider">
+            <div class="slides">
                 <div class="slide">
-                    <img src="./img/slider_00000.jpg" alt="Slide 1">
-                    <div class="slide-caption">
-                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
-                    </div>
-                    <!-- Video -->
-
+                    <img src="./img/slider_00000.jpg" alt="Image 1">
                 </div>
                 <div class="slide">
-                    <img src="./img/slider_00001.jpg" alt="Slide 2">
-                    <div class="slide-caption">
-                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
-                    </div>
                     <div class="slider-text">
-                        <h1 style="font-size: 48px;">კურორტი</h1>
-
-                        <h1 style="font-size: 54px;">ა რ ა გ ვ ი ს პ ი რ ი</h1>
-                        <h1 style="font-size: 36px;">იცხოვრე ჯანსაღ გარემოში</h1>
+                        <h1 style="font-size: 48px;">ახალი დასახლება</h1>
+                        <h1 style="font-size: 54px;">ა რ ა გ ვ ი ს პ ი რ შ ი</h1>
                     </div>
+                    <img src="./img/slider_00001.jpg" alt="Image 2">
                 </div>
                 <div class="slide">
-                    <img src="./img/slider_00002.jpg" alt="Slide 3">
-                    <div class="slide-caption">
-                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
-                    </div>
+                    <img src="./img/slider_00002.jpg" alt="Image 3">
                 </div>
                 <div class="slide">
-                    <img src="./img/slider_00003 (1).jpg" alt="Slide 4">
-                    <div class="slide-caption">
-                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
-                    </div>
+                    <img src="./img/slider_00003 (1).jpg" alt="Image 4">
                 </div>
                 <div class="slide">
-                    <img src="./img/slider_00004.jpg" alt="Slide 4">
-                    <div class="slide-caption">
-                        <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
-                    </div>
+                    <img src="./img/slider_00004.jpg" alt="Image 5">
                 </div>
             </div>
-            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slide-caption">
+            <a class="chooseflat" href="./flat/">შეარჩიე შენი სახლი </a>
         </div>
     </main>
+
     <footer>
         <div class="footer-content">
             <b>კონტაქტი</b>
@@ -118,8 +101,7 @@
                 <a style="cursor: pointer;" href=""><img src="../nlgroup.png"></a>
             </div>
         </div>
-        <p
-            style="left: 40%; text-align: center; color: #ffff; font-weight: bold; position: absolute; bottom: 0; margin: 0 auto;">
+        <p class="cr">
             &copy; 2023 All rights reserved | i3D Render Studio</p>
     </footer>
 
@@ -133,31 +115,21 @@
             navLinks.classList.toggle('active');
         })
 
+        // Carousel
+        const slides = document.querySelectorAll('.slide');
 
-        const carousel = document.querySelector('.carousel');
-        const carouselSlides = document.querySelectorAll('.slide');
-        const prevBtn = document.querySelector('.carousel-prev');
-        const nextBtn = document.querySelector('.carousel-next');
+        let currentSlide = 0;
+        let slideInterval = setInterval(nextSlide, 6000);
 
-        let currentIndex = 0;
-        let slideInterval;
+        nextSlide();
 
         function nextSlide() {
-            currentIndex = (currentIndex + 1) % carouselSlides.length;
-            carousel.style.transform = `translateX(-${currentIndex * 20}%)`;
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
         }
 
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + carouselSlides.length) % carouselSlides.length;
-            carousel.style.transform = `translateX(-${currentIndex * 20}%)`;
-        }
 
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-
-        slideInterval = setInterval(() => {
-            nextSlide();
-        }, 5000);
         //   Video
         $('#play-video').on('click', function (e) {
 
