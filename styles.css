@@ -372,6 +372,29 @@ footer {
         font-weight: bold;
         margin: 0 auto;
     }
+
+    .slide-caption {
+        top: 63%;
+    }
+
+    .video-play-button {
+        bottom: 45% !important;
+    }
+
+    .slider-text {
+        top: 10%;
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+
+    .slider-text h1 {
+
+        font-weight: 900;
+        float: right;
+        text-align: center;
+    }
+
 }
 
 

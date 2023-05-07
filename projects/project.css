@@ -388,6 +388,7 @@ footer {
 
 /* For mobile devices with a maximum width of 767px */
 @media only screen and (max-width: 767px) {
+
   footer {
     height: auto;
   }
@@ -425,5 +426,39 @@ footer {
     color: #ffff;
     font-weight: bold;
     margin: 0 auto;
+  }
+
+  /* thumbnails */
+  .thumbnails {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    left: 0;
+  }
+
+  .thumbnails img {
+    display: block;
+    margin: 5px;
+    cursor: pointer;
+    width: 50px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+
+  .project-title {
+    left: 0;
+    z-index: 99;
+    width: 500px;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    right: 0;
+    top: 5%;
   }
 }
