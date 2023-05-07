@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <header>
         <div class="navbar-wrapper">
             <nav class="navbar-content">
@@ -31,12 +30,10 @@
             </nav>
         </div>
     </header>
-    <!-- Carousel -->
     <main>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="slide">
-                    <img class="main-image" src="../img/project1.png" alt="Slide 1">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
                     <div class="project-title">
                         <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 1</h1>
                     </div>
@@ -44,9 +41,15 @@
                         <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
                         <h2>საცხოვრებელი 120 კვ.მ</h2>
                     </div>
+                    <img class="main-img" src="../img/project1.png" alt="Slide 1">
+                    <div class="thumbnails">
+                        <img src="../img/project1.png" alt="Slide 1 thumbnail 1" data-slide="1" data-index="0">
+                        <img src="../img/project2.png" alt="Slide 1 thumbnail 2" data-slide="1" data-index="1">
+                        <img src="../img/project3.png" alt="Slide 1 thumbnail 3" data-slide="1" data-index="2">
+                        <img src="../img/project4.png" alt="Slide 1 thumbnail 4" data-slide="1" data-index="3">
+                    </div>
                 </div>
                 <div class="slide">
-                    <img src="../img/project2.png" alt="Slide 2">
                     <div class="project-title">
                         <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 2</h1>
                     </div>
@@ -54,9 +57,15 @@
                         <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
                         <h2>საცხოვრებელი 120 კვ.მ</h2>
                     </div>
+                    <img class="main-img" src="../img/project2.png" alt="Slide 2">
+                    <div class="thumbnails">
+                        <img src="../img/project1.png" alt="Slide 1 thumbnail 1" data-slide="2" data-index="0">
+                        <img src="../img/project2.png" alt="Slide 1 thumbnail 2" data-slide="2" data-index="1">
+                        <img src="../img/project3.png" alt="Slide 1 thumbnail 3" data-slide="2" data-index="2">
+                        <img src="../img/project4.png" alt="Slide 1 thumbnail 4" data-slide="2" data-index="3">
+                    </div>
                 </div>
                 <div class="slide">
-                    <img src="../img/project3.png" alt="Slide 3">
                     <div class="project-title">
                         <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 3</h1>
                     </div>
@@ -64,9 +73,15 @@
                         <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
                         <h2>საცხოვრებელი 120 კვ.მ</h2>
                     </div>
+                    <img class="main-img" src="../img/project3.png" alt="Slide 3">
+                    <div class="thumbnails">
+                        <img src="../img/project1.png" alt="Slide 1 thumbnail 1" data-slide="3" data-index="0">
+                        <img src="../img/project2.png" alt="Slide 1 thumbnail 2" data-slide="3" data-index="1">
+                        <img src="../img/project3.png" alt="Slide 1 thumbnail 3" data-slide="3" data-index="2">
+                        <img src="../img/project4.png" alt="Slide 1 thumbnail 4" data-slide="3" data-index="3">
+                    </div>
                 </div>
                 <div class="slide">
-                    <img src="../img/project4.png" alt="Slide 4">
                     <div class="project-title">
                         <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 4</h1>
                     </div>
@@ -74,10 +89,21 @@
                         <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
                         <h2>საცხოვრებელი 120 კვ.მ</h2>
                     </div>
+                    <img class="main-img" src="../img/project4.png" alt="Slide 4">
+                    <div class="thumbnails">
+                        <img src="../img/project1.png" alt="Slide 1 thumbnail 1" data-slide="4" data-index="0">
+                        <img src="../img/project2.png" alt="Slide 1 thumbnail 2" data-slide="4" data-index="1">
+                        <img src="../img/project3.png" alt="Slide 1 thumbnail 3" data-slide="4" data-index="2">
+                        <img src="../img/project4.png" alt="Slide 1 thumbnail 4" data-slide="4" data-index="3">
+                    </div>
                 </div>
             </div>
-            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="slide-buttons">
+                <span class="slide-button active"></span>
+                <span class="slide-button"></span>
+                <span class="slide-button"></span>
+                <span class="slide-button"></span>
+            </div>
         </div>
     </main>
     <footer>
