@@ -462,3 +462,37 @@ footer {
     top: 5%;
   }
 }
+
+/* Slider arrows */
+/* Style the next and prev buttons */
+.slider-container .prev, .slider-container .next {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Position the prev button to the left */
+.slider-container .prev {
+  left: 20px;
+}
+
+/* Position the next button to the right */
+.slider-container .next {
+  right: 20px;
+}
+
+/* Change the background color of the buttons on hover */
+.slider-container .prev:hover, .slider-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
