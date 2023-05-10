@@ -154,159 +154,50 @@ ul {
   padding: 0px;
 }
 
-/* Slider Container */
-.slider-container {
-  width: 100%;
-  max-width: 1920px;
+/* Main */
+.section {
+  background-color: gainsboro;
+  width: 1920px;
   height: 580px;
-  position: relative;
-  margin: 0 auto;
-}
-
-/* Slider */
-.slider {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Slide */
-.slide {
-  background-color: #C3C3C3;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-/* Main Image */
-.main-img {
-  
-  z-index: 9998;
-  display: block;
-  max-width: 100%;
-  margin: auto;
-  position: absolute;
-  top: 22%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-/* Slide Text */
-.slide-text {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  box-sizing: border-box;
-  color: #fff;
-}
-
-.slide-text h3 {
-  font-size: 32px;
-  margin: 0 0 10px 0;
-}
-
-.slide-text p {
-  font-size: 18px;
-  margin: 0;
-}
-
-/* Thumbnails */
-.thumbnails {
-  z-index: 9999;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-width: 500px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  right: 0;
 }
 
-.thumbnails img {
-  display: block;
-  margin: 5px;
-  cursor: pointer;
-  width: 40%;
-  height: 20%;
-  object-fit: cover;
-  border: 2px solid #fff;
+.box {
+  width: 958px;
+  height: 290px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.thumbnails img.active {
-  border: 2px solid #ffcc00;
+.box:nth-child(1) {
+  border: 1px solid black;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../img/project1.png');
 }
 
-.slide-buttons {
-  z-index: 99999;
-  position: absolute;
-  bottom: 20px;
-  right: 0;
-  left: 0;
-  margin: auto;
-  width: 100px;
-  height: 20px;
-  text-align: center;
+.box:nth-child(2) {
+  border: 1px solid black;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../img/project2.png');
 }
 
-.slide-button {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin-right: 5px;
-  cursor: pointer;
+.box:nth-child(3) {
+  border: 1px solid black;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../img/project3.png');
 }
 
-.slide-button.active {
-  background-color: #ffcc00;
+.box:nth-child(4) {
+  border: 1px solid black;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../img/project4.png');
 }
 
-.project-title {
-  z-index: 99;
-  width: 500px;
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  right: 25%;
-  top: 5%;
-}
-
-.project-title h1 {
-  font-weight: 900;
-}
-
-.slider-text {
-  z-index: 99;
-  width: 520px;
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  right: 25%;
-  bottom: 10%;
-}
-
-.slider-text h2 {
-  float: right;
-}
 
 /* footer */
 
@@ -432,71 +323,4 @@ footer {
     margin: 0 auto;
   }
 
-  /* thumbnails */
-  .thumbnails {
-    position: absolute;
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: center;
-    left: 0;
-  }
-
-  .thumbnails img {
-    display: block;
-    margin: 5px;
-    cursor: pointer;
-    width: 50px;
-    height: 60px;
-    object-fit: cover;
-    border: 2px solid #fff;
-  }
-
-  .project-title {
-    left: 0;
-    z-index: 99;
-    width: 500px;
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    right: 0;
-    top: 5%;
-  }
-}
-
-/* Slider arrows */
-/* Style the next and prev buttons */
-.slider-container .prev, .slider-container .next {
-  z-index: 99999;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
-  line-height: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Position the prev button to the left */
-.slider-container .prev {
-  left: 20px;
-}
-
-/* Position the next button to the right */
-.slider-container .next {
-  right: 20px;
-}
-
-/* Change the background color of the buttons on hover */
-.slider-container .prev:hover, .slider-container .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }

@@ -1,312 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Slider Container */
-        .slider-container {
-            width: 100%;
-            max-width: 1920px;
-            height: 580px;
-            position: relative;
-            margin: 0 auto;
-        }
-
-        /* Slider */
-        .slider {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Slide */
-        .slide {
-            background-color: #C3C3C3;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        /* Main Image */
-        .main-img {
-            display: block;
-            max-width: 100%;
-            margin: auto;
-            position: absolute;
-            top: 22%;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        /* Slide Text */
-        .slide-text {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            max-width: 500px;
-            padding: 20px;
-            box-sizing: border-box;
-            color: #fff;
-        }
-
-        .slide-text h3 {
-            font-size: 32px;
-            margin: 0 0 10px 0;
-        }
-
-        .slide-text p {
-            font-size: 18px;
+        *{
             margin: 0;
+            padding: 0;
         }
+        .section {
+            background-color: gainsboro;
+  width: 1920px;
+  height: 580px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-        /* Thumbnails */
-        .thumbnails {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            max-width: 500px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-        }
+.box {
+    width: 950px;
+    height: 288px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
-        .thumbnails img {
-            display: block;
-            margin: 5px;
-            cursor: pointer;
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border: 2px solid #fff;
-        }
+.box:nth-child(1) {
+    border:1px solid black;
+    background-size: contain;
+    background-position: center;
+  background-image: url('./img/project1.png');
+}
 
-        .thumbnails img.active {
-            border: 2px solid #ffcc00;
-        }
+.box:nth-child(2) {
+    border:1px solid black;
+    background-size: contain;
+    background-position: center;
+  background-image: url('./img/project2.png');
+}
 
-        .slide-buttons {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            margin: auto;
-            width: 100px;
-            height: 20px;
-            text-align: center;
-        }
+.box:nth-child(3) {
+    border:1px solid black;
+    background-size: contain;
+    background-position: center;
+  background-image: url('./img/project3.png');
+}
 
-        .slide-button {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #ccc;
-            margin-right: 5px;
-            cursor: pointer;
-        }
+.box:nth-child(4) {
+    border:1px solid black;
+    background-size: contain;
+    background-position: center;
+  background-image: url('./img/project4.png');
+}
 
-        .slide-button.active {
-            background-color: #000;
-        }
 
-        .project-title {
-            z-index: 99;
-            width: 500px;
-            position: absolute;
-            color: white;
-            font-weight: bold;
-            right: 25%;
-            top: 5%;
-        }
-
-        .project-title h1 {
-            font-weight: 900;
-        }
-
-        .slider-text {
-            z-index: 99;
-            width: 500px;
-            position: absolute;
-            color: white;
-            font-weight: bold;
-            right: 25%;
-            bottom: 10%;
-        }
-
-        .slider-text h2 {
-            float: right;
-        }
     </style>
 </head>
-
 <body>
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide active">
-                <div class="project-title">
-                    <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 1</h1>
-                </div>
-                <div class="slider-text">
-                    <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
-                    <h2>საცხოვრებელი 120 კვ.მ</h2>
-                </div>
-                <img class="main-img" src="./img/project1.png" alt="Slide 1">    
-                <div class="thumbnails">
-                    <img src="./img/project1.png" alt="Slide 1 thumbnail 1" data-slide="1" data-index="0">
-                    <img src="./img/project2.png" alt="Slide 1 thumbnail 2" data-slide="1" data-index="1">
-                    <img src="./img/project3.png" alt="Slide 1 thumbnail 3" data-slide="1" data-index="2">
-                    <img src="./img/project4.png" alt="Slide 1 thumbnail 4" data-slide="1" data-index="3">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="project-title">
-                    <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 2</h1>
-                </div>
-                <div class="slider-text">
-                    <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
-                    <h2>საცხოვრებელი 120 კვ.მ</h2>
-                </div>
-                <img class="main-img" src="./img/project2.png" alt="Slide 2">                
-                <div class="thumbnails">
-                    <img src="./img/project1.png" alt="Slide 1 thumbnail 1" data-slide="2" data-index="0">
-                    <img src="./img/project2.png" alt="Slide 1 thumbnail 2" data-slide="2" data-index="1">
-                    <img src="./img/project3.png" alt="Slide 1 thumbnail 3" data-slide="2" data-index="2">
-                    <img src="./img/project4.png" alt="Slide 1 thumbnail 4" data-slide="2" data-index="3">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="project-title">
-                    <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 3</h1>
-                </div>
-                <div class="slider-text">
-                    <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
-                    <h2>საცხოვრებელი 120 კვ.მ</h2>
-                </div>
-                <img class="main-img" src="./img/project3.png" alt="Slide 3">                
-                <div class="thumbnails">
-                    <img src="./img/project1.png" alt="Slide 1 thumbnail 1" data-slide="3" data-index="0">
-                    <img src="./img/project2.png" alt="Slide 1 thumbnail 2" data-slide="3" data-index="1">
-                    <img src="./img/project3.png" alt="Slide 1 thumbnail 3" data-slide="3" data-index="2">
-                    <img src="./img/project4.png" alt="Slide 1 thumbnail 4" data-slide="3" data-index="3">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="project-title">
-                    <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 4</h1>
-                </div>
-                <div class="slider-text">
-                    <h2>მიწის ნაკვეთი 720 კვ.მ</h2>
-                    <h2>საცხოვრებელი 120 კვ.მ</h2>
-                </div>
-                <img class="main-img" src="./img/project4.png" alt="Slide 4">                
-                <div class="thumbnails">
-                    <img src="./img/project1.png" alt="Slide 1 thumbnail 1" data-slide="4" data-index="0">
-                    <img src="./img/project2.png" alt="Slide 1 thumbnail 2" data-slide="4" data-index="1">
-                    <img src="./img/project3.png" alt="Slide 1 thumbnail 3" data-slide="4" data-index="2">
-                    <img src="./img/project4.png" alt="Slide 1 thumbnail 4" data-slide="4" data-index="3">
-                </div>
-            </div>
-        </div>
-        <div class="slide-buttons">
-            <span class="slide-button active"></span>
-            <span class="slide-button"></span>
-            <span class="slide-button"></span>
-            <span class="slide-button"></span>
-        </div>
-    </div>
-    <script>
-        // Get all necessary elements from the DOM
-        const slider = document.querySelector('.slider');
-        const slides = document.querySelectorAll('.slide');
-        const thumbnails = document.querySelectorAll('.thumbnails img');
-        const slideButtons = document.querySelectorAll('.slide-button');
-
-        // Initialize current slide index and thumbnail index for each slide
-        let currentSlideIndex = 0;
-        let thumbnailIndex = [];
-
-        // Loop through all slides to get their thumbnail indexes
-        slides.forEach((slide, index) => {
-            thumbnailIndex.push([]);
-            const slideThumbnails = slide.querySelectorAll('.thumbnails img');
-            slideThumbnails.forEach((thumbnail, i) => {
-                thumbnailIndex[index].push(i);
-            });
-        });
-
-        // Function to change slide
-        const changeSlide = (index) => {
-            // Deactivate all slides and thumbnail images
-            slides.forEach((slide) => slide.classList.remove('active'));
-            thumbnails.forEach((thumbnail) =>
-                thumbnail.classList.remove('active')
-            );
-
-            // Activate the current slide and thumbnail image
-            slides[index].classList.add('active');
-            thumbnails[thumbnailIndex[index][0]].classList.add('active');
-            currentSlideIndex = index;
-
-            // Activate the corresponding slide button
-            slideButtons.forEach((button) => button.classList.remove('active'));
-            slideButtons[index].classList.add('active');
-        };
-        // Loop through all thumbnails to add event listener
-        thumbnails.forEach((thumbnail) => {
-            thumbnail.addEventListener('click', () => {
-                const slideIndex = thumbnail.dataset.slide - 1;
-                const thumbnailIndex = thumbnail.dataset.index;
-                const mainImg = slides[slideIndex].querySelector('.main-img');
-                const newSrc = thumbnail.src;
-
-                // Change the main image of the current slide
-                mainImg.src = newSrc;
-
-                // Deactivate all thumbnail images
-                thumbnails.forEach((thumbnail) =>
-                    thumbnail.classList.remove('active')
-                );
-
-                // Activate the clicked thumbnail image
-                thumbnail.classList.add('active');
-
-                // Change the current slide
-                changeSlide(slideIndex);
-            });
-        });
-
-        // Loop through all slide buttons to add event listener
-        slideButtons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                // Change slide according to the clicked button
-                changeSlide(index);
-            });
-        });
-
-        // Activate the first slide and thumbnail image
-        changeSlide(currentSlideIndex);
-        thumbnails[thumbnailIndex[currentSlideIndex][0]].classList.add('active');
-    </script>
-
+    <div class="section">
+        <a style="cursor:pointer" href="./project1/"><div class="box" style="background-image: url(./img/project1.png);"></div></a>
+        <a style="cursor:pointer" href="./project2/"><div class="box" style="background-image: url(./img/project2.png);"></div></a>
+        <a style="cursor:pointer" href=""><div class="box" style="background-image: url(./img/project3.png);"></div></a>
+        <a style="cursor:pointer" href=""><div class="box" style="background-image: url(./img/project4.png);"></div></a>
+      </div>
+      
 </body>
-
 </html>
