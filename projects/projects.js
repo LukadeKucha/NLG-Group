@@ -59,6 +59,11 @@ thumbnails.forEach((thumbnail) => {
 
     // Change the current slide
     changeSlide(slideIndex);
+    if (thumbnailIndex !== '0') {
+      mainImg.style.top = '0'; // Set style.top to 0
+    } else {
+      mainImg.style.removeProperty('top'); // Remove the style.top property
+    }
   });
 });
 
@@ -110,16 +115,16 @@ nextButton.addEventListener('click', () => {
   currentIndex++;
   if (currentIndex >= slidess.length) {
     currentIndex = 0;
-    }
-    // Deactivate all thumbnail images
-    thumbnails.forEach((thumbnail) => thumbnail.classList.remove('active'));
-    
-    // Activate the thumbnail image of the current slide
-    const slideThumbnails = slidess[currentIndex].querySelectorAll('.thumbnails img');
-    const activeThumbnail = slideThumbnails[0];
-    activeThumbnail.classList.add('active');
-    // activeThumbnail.style.border = '2px solid red'; // add border to the active thumbnail
-    
-    // Change the current slide
-    changeSlide(currentIndex);
-    });
+  }
+  // Deactivate all thumbnail images
+  thumbnails.forEach((thumbnail) => thumbnail.classList.remove('active'));
+
+  // Activate the thumbnail image of the current slide
+  const slideThumbnails = slidess[currentIndex].querySelectorAll('.thumbnails img');
+  const activeThumbnail = slideThumbnails[0];
+  activeThumbnail.classList.add('active');
+  // activeThumbnail.style.border = '2px solid red'; // add border to the active thumbnail
+
+  // Change the current slide
+  changeSlide(currentIndex);
+});

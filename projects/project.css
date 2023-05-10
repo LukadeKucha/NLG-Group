@@ -189,6 +189,8 @@ ul {
 
 /* Main Image */
 .main-img {
+  
+  z-index: 9998;
   display: block;
   max-width: 100%;
   margin: auto;
@@ -224,6 +226,7 @@ ul {
 
 /* Thumbnails */
 .thumbnails {
+  z-index: 9999;
   height: 100%;
   position: absolute;
   bottom: 0;
@@ -252,6 +255,7 @@ ul {
 }
 
 .slide-buttons {
+  z-index: 99999;
   position: absolute;
   bottom: 20px;
   right: 0;
@@ -292,7 +296,7 @@ ul {
 
 .slider-text {
   z-index: 99;
-  width: 500px;
+  width: 520px;
   position: absolute;
   color: white;
   font-weight: bold;
@@ -466,7 +470,7 @@ footer {
 /* Slider arrows */
 /* Style the next and prev buttons */
 .slider-container .prev, .slider-container .next {
-  z-index: 999;
+  z-index: 99999;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
