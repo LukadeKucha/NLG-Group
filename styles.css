@@ -211,8 +211,9 @@ ul {
 }
 
 .slider-text {
+    font-size: 1.8rem;
     top: 50%;
-    width: 30%;
+    width: 37%;
     position: absolute;
     color: white;
     font-weight: bold;
