@@ -254,12 +254,13 @@ body {
   }
   
   .slider-text {
+    font-size: 1.7rem;
     z-index: 99;
     width: 520px;
     position: absolute;
     color: white;
     font-weight: bold;
-    right: 25%;
+    right: 20%;
     bottom: 10%;
   }
   

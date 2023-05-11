@@ -156,7 +156,7 @@ ul {
 
 /* Main */
 .section {
-  background-color: gainsboro;
+  background-color: #c3c3c3;
   width: 1920px;
   height: 580px;
   display: flex;
