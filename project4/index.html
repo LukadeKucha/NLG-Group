@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../logo.png">
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="style.css">
     <title>NLG Group</title>
 </head>
 
@@ -23,7 +24,7 @@
                 <a href="../" class="logo"><img style="height: 2.5rem;" src="../logo.png"></a>
                 <ul class="nav-links">
                     <li><a href="../about/">კომპანიის შესახებ</a></li>
-                    <li><a href="#">პროექტები</a></li>
+                    <li><a href="../projects/">პროექტები</a></li>
                     <li><a href="../gallery">გალერეა</a></li>
                 </ul>
                 <i class='bx bx-menu' id="burger"></i>
@@ -31,19 +32,35 @@
         </div>
     </header>
     <main>
-        <div class="section">
-            <a style="cursor:pointer" href="../project1/">
-                <div class="box" style="background-image: url(../img/project1.png);"></div>
-            </a>
-            <a style="cursor:pointer" href="../project2/">
-                <div class="box" style="background-image: url(../img/project2.png);"></div>
-            </a>
-            <a style="cursor:pointer" href="../project3/">
-                <div class="box" style="background-image: url(../img/project3.png);"></div>
-            </a>
-            <a style="cursor:pointer" href="../project4/">
-                <div class="box" style="background-image: url(../img/project4.png);"></div>
-            </a>
+        <div class="slider-container">
+            <div class="prev">&lt;</div>
+            <div class="next">&gt;</div>
+            <div class="slider">
+                <div class="slide active">
+                    <div class="project-title">
+                        <h1 style="font-size: 64px;">პ რ ო ე ქ ტ ი 4</h1>
+                    </div>
+                    <div class="slider-text">
+                        <h2>საცხოვრებელი ფართი: 95.22 კვ.მ</h2>
+                        <h2>საერთო ფართი: 135.67 კვ.მ</h2>
+                        <h2>საზაფხულო ფართი: 40.45 კვ.მ</h2>
+                    </div>
+                    <img class="main-img" src="../img/project4.png" alt="Slide 1">
+
+                </div>
+                <div class="slide">
+                    <img class="main-img-2" src="../img/პროექტი4-1.jpg" alt="Slide 2">
+
+                </div>
+                <div class="slide">
+                    <img class="main-img-2" src="../img/პროექტი4-2.jpg" alt="Slide 3">
+
+                </div>
+                <div class="slide">
+                    <img class="main-img-2" src="../img/პროექტი4-3.jpg" alt="Slide 4">
+
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -83,7 +100,7 @@
             &copy; 2023 All rights reserved | i3D Render Studio</p>
     </footer>
 
-    <script src="projects.js"></script>
+    <script src="../slider.js"></script>
     <script>
         function changeImage(src) {
             document.getElementById("main-image").src = src;
@@ -97,6 +114,12 @@
             navLinks.classList.toggle('active');
         })
     </script>
+
+</body>
+
+</html>
+
+<body>
 
 </body>
 
